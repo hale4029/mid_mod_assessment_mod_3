@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
   def index
-    require "pry"; binding.pry
+    conn = API.new(params[:house])
+    members = conn.members
   end
 end
