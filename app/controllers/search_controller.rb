@@ -1,6 +1,5 @@
 class SearchController < ApplicationController
   def index
-    conn = API.new(params[:house])
-    members = conn.members
+    @service = API.new(params[:house])
   end
 end
